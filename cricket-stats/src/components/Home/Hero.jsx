@@ -2,11 +2,13 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Users, Trophy, TrendingUp } from 'lucide-react';
 import CTAButtons from './CTAButtons';
+import Hero3DBackground from './Hero3DBackground';
 
 const Hero = () => {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Hero3DBackground />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
