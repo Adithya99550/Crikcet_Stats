@@ -42,25 +42,25 @@ const Hero3DBackground = () => {
         {/* Soft lighting for the scene */}
         <ambientLight intensity={1} />
         {/* Accent light matching the primary blue color */}
-        <directionalLight position={[10, 10, 5]} intensity={3} color="#3b82f6" />
+        <directionalLight position={[10, 10, 5]} intensity={3} color="#4A5C8A" />
         {/* Accent light matching the orange/accent color */}
-        <directionalLight position={[-10, -10, -5]} intensity={2} color="#f97316" />
+        <directionalLight position={[-10, -10, -5]} intensity={2} color="#9BA8AB" />
         
         <BackgroundParticles />
         
         {/* Right main orb */}
         <group position={[4, 0, -2]} scale={1.2}>
-          <AnimatedSphere color="#3b82f6" distort={0.4} speed={2} />
+          <AnimatedSphere color="#4A5C8A" distort={0.4} speed={2} />
         </group>
         
         {/* Left secondary orb */}
         <group position={[-5, 1, -4]} scale={0.8}>
-          <AnimatedSphere color="#0ea5e9" distort={0.3} speed={1.5} />
+          <AnimatedSphere color="#253745" distort={0.3} speed={1.5} />
         </group>
 
         {/* Top small orb */}
         <group position={[1, 3, -6]} scale={0.5}>
-          <AnimatedSphere color="#f97316" distort={0.5} speed={3} />
+          <AnimatedSphere color="#9BA8AB" distort={0.5} speed={3} />
         </group>
       </Canvas>
     </div>

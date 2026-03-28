@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-dark-950 text-white font-sans antialiased;
+    @apply bg-custom-bg text-custom-primary font-sans antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,23 +23,23 @@
 
 @layer components {
   .glass-card {
-    @apply bg-surface-900/80 backdrop-blur-xl border border-white/10 rounded-2xl;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    @apply bg-custom-card/90 backdrop-blur-xl border border-custom-border rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(204, 208, 207, 0.05);
   }
 
   .glass-card-hover {
     @apply glass-card transition-all duration-300;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05),
-                0 0 0 1px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(204, 208, 207, 0.05),
+                0 0 0 1px rgba(74, 92, 138, 0.1);
   }
 
   .glass-card-hover:hover {
-    @apply -translate-y-1 shadow-glow border-primary-500/30;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05),
-                0 0 30px rgba(139, 92, 246, 0.3);
+    @apply -translate-y-1 shadow-glow border-custom-muted/50;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(204, 208, 207, 0.05),
+                0 0 30px rgba(74, 92, 138, 0.3);
   }
 
   .stat-number {
@@ -47,29 +47,29 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-blue-400 to-primary-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-custom-muted via-custom-primary to-custom-muted bg-clip-text text-transparent;
     background-size: 200% auto;
     animation: gradient-x 8s ease infinite;
   }
 
   .gradient-text-accent {
-    @apply bg-gradient-to-r from-accent-400 to-cyan-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-custom-secondary to-custom-primary bg-clip-text text-transparent;
   }
 
   .btn-primary {
-    @apply px-8 py-4 rounded-xl font-semibold text-white;
-    @apply bg-gradient-to-r from-primary-600 to-blue-600;
-    @apply hover:from-primary-500 hover:to-blue-500;
-    @apply shadow-lg shadow-primary-500/20;
+    @apply px-8 py-4 rounded-xl font-semibold text-custom-bg;
+    @apply bg-gradient-to-r from-[#9BA8AB] to-[#CCD0CF];
+    @apply hover:from-[#CCD0CF] hover:to-[#ffffff];
+    @apply shadow-lg shadow-custom-muted/20;
     @apply transition-all duration-300;
-    @apply hover:shadow-xl hover:shadow-primary-500/30;
+    @apply hover:shadow-xl hover:shadow-custom-muted/30;
     @apply hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply px-8 py-4 rounded-xl font-semibold text-white;
-    @apply bg-surface-800/80 backdrop-blur border border-white/10;
-    @apply hover:bg-surface-700/80;
+    @apply px-8 py-4 rounded-xl font-semibold text-custom-primary;
+    @apply bg-custom-card border border-custom-border;
+    @apply hover:border-custom-muted transition-colors;
     @apply transition-all duration-300;
     @apply hover:-translate-y-0.5;
   }
@@ -79,7 +79,7 @@
   }
 
   .section-subtitle {
-    @apply text-gray-400 text-lg mb-8;
+    @apply text-custom-secondary text-lg mb-8;
   }
 }
 
@@ -90,10 +90,10 @@
 
   @keyframes glow-pulse {
     0%, 100% {
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+      box-shadow: 0 0 20px rgba(74, 92, 138, 0.3);
     }
     50% {
-      box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+      box-shadow: 0 0 40px rgba(74, 92, 138, 0.5);
     }
   }
 }
@@ -105,18 +105,18 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-900;
+  @apply bg-custom-bg;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-surface-700 rounded-full;
+  @apply bg-custom-border rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-surface-600;
+  @apply bg-custom-muted;
 }
 
 /* Selection */
 ::selection {
-  @apply bg-primary-500/30 text-white;
+  @apply bg-custom-muted/40 text-custom-primary;
 }
