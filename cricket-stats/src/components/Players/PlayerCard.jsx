@@ -12,12 +12,36 @@ const getCountryFlag = (country) => {
     'Sri Lanka': 'lk',
     Bangladesh: 'bd',
     Afghanistan: 'af',
-    'West Indies': 'wi',
     Ireland: 'ie',
     Netherlands: 'nl',
     Scotland: 'gb-sct',
     Zimbabwe: 'zw',
   };
+
+  // Special case for West Indies - use custom SVG
+  if (country === 'West Indies') {
+    return (
+      <svg
+        width="28"
+        height="20"
+        viewBox="0 0 28 20"
+        className="inline-block rounded-sm"
+      >
+        {/* West Indies flag - black background */}
+        <rect width="28" height="20" fill="#000" />
+        {/* Gold cricket stumps and ball - simplified */}
+        <g fill="#FFD700">
+          {/* Ball */}
+          <circle cx="14" cy="10" r="3" />
+          {/* Stumps */}
+          <rect x="10" y="8" width="1.5" height="4" />
+          <rect x="13.5" y="8" width="1.5" height="4" />
+          <rect x="17" y="8" width="1.5" height="4" />
+        </g>
+      </svg>
+    );
+  }
+
   const cc = countryCodes[country];
   return cc ? (
     <img

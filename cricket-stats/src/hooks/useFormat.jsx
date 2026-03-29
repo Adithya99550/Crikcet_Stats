@@ -3,7 +3,7 @@ import { useState, createContext, useContext } from 'react';
 const FormatContext = createContext();
 
 export const FormatProvider = ({ children }) => {
-  const [format, setFormat] = useState('test');
+  const [format, setFormat] = useState('odi');
 
   return (
     <FormatContext.Provider value={{ format, setFormat }}>

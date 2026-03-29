@@ -109,6 +109,25 @@ const LeaderboardsPage = () => {
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">
                       {(() => {
+                        // Special case for West Indies - use custom SVG
+                        if (player.country === 'West Indies') {
+                          return (
+                            <svg
+                              width="28"
+                              height="20"
+                              viewBox="0 0 28 20"
+                              className="inline-block rounded-sm"
+                            >
+                              <rect width="28" height="20" fill="#000" />
+                              <g fill="#FFD700">
+                                <circle cx="14" cy="10" r="3" />
+                                <rect x="10" y="8" width="1.5" height="4" />
+                                <rect x="13.5" y="8" width="1.5" height="4" />
+                                <rect x="17" y="8" width="1.5" height="4" />
+                              </g>
+                            </svg>
+                          );
+                        }
                         const countryCodes = {
                           India: 'in',
                           Australia: 'au',
@@ -119,7 +138,6 @@ const LeaderboardsPage = () => {
                           'Sri Lanka': 'lk',
                           Bangladesh: 'bd',
                           Afghanistan: 'af',
-                          'West Indies': 'wi',
                           Ireland: 'ie',
                           Netherlands: 'nl',
                           Scotland: 'gb-sct',

@@ -1,7 +1,7 @@
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
-    "ANTHROPIC_AUTH_TOKEN": "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",
+    "ANTHROPIC_AUTH_TOKEN": "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",
     "ANTHROPIC_API_KEY": "",
     "ANTHROPIC_MODEL": "stepfun/step-3.5-flash:free"
   },
@@ -14,7 +14,8 @@
       "Bash(npx tailwindcss:*)",
       "Bash(npm run:*)",
       "Bash(where npm:*)",
-      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run dev)"
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run dev)",
+      "WebSearch"
     ]
   }
 }
